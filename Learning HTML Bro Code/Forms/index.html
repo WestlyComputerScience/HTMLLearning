@@ -1,0 +1,143 @@
+<!DOCTYPE html>
+<html lang="en">
+
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title>Document</title>
+    </head>
+
+    <body>
+        
+        <!--Send the data to a php get function-->
+        <!--Don't use get for unsecure information-->
+        <!-- enctype="multipart/form-data" is when we send a large amount of data, we break into parts and send it for it to get put back together, used when sending an image -->
+        <form action = "action_page.php" method = "GET" enctype="multipart/form-data">
+            <!-- <form action = "action_page.php" method = "POST"> for more secure information, get for insensitive data -->
+
+
+            <!-- required makes it required to fill out -->
+            <div>
+                <label for = "fname">First Name:</label>
+                <input type = "text" id = "fname" name = "fname" placeholder = "Dave" minlength="6" maxlength="12" required>
+            </div>
+
+            <br>
+
+            <div>
+                <label for = "lname">Last Name:</label>
+                <input type = "text" id = "lname" name = "lname" placeholder = "Smithinson" required>
+            </div>
+
+            <br>
+
+            <!--resets the boxes-->
+            <div>
+                <input type = "reset">
+            </div>
+
+            <br>
+
+            <!--submits the boxes-->
+            <div>
+                <input type = "submit">
+            </div>
+
+            <br>
+
+            <!-- to input a password -->
+            <div>
+                <label for = "pass">Password:</label>
+                <input type = "password" id = "pass" name = "pass" maxlength = "12" required>
+            </div>
+
+            <br>
+
+            <!-- to input an email -->
+            <div>
+                <label for = "emal">Email:</label>
+                <input type = "emal" id = "email" name = "email" placeholder = "MyEmail@gmail.com">
+            </div>
+
+            <br>
+
+            <!-- to input a phone number -->
+            <div>
+                <label for = "phone">Phone Number:</label>
+                <input type = "tel" id = "phone" name = "phone" placeholder = "(123)-456-7890">
+            </div>
+
+            <br>
+
+            <!-- to input a birth date -->
+            <div>
+                <label for = "bdate">Birthdate:</label>
+                <input type = "date" id = "bdate" name = "bdate">
+            </div>
+
+            <br>
+
+            <!-- to input a number -->
+            <div>
+                <label for = "quantity">quantity:</label>
+                <input type = "number" id = "quantity" name = "quantity" min = "0" max = "99" value = "1">
+            </div>
+
+            <br>
+
+            <!-- to input a radio button -->
+            <!-- Note: setting the for and ID allows you to click on the text and select the radio button-->
+            <!-- Note: the labor for groups all of the radio buttons together! -->
+            <div>
+                <label for = "title">Title: </label>
+
+                <label for = "Mr.">Mr.</label>
+                <input type = "radio" id = "Mr." name = "title" value = "Mr.">
+
+                <label for = "Mrs.">Mrs.</label>
+                <input type = "radio" id = "Mrs." name = "title" value = "Mrs.">
+
+                <label for = "PhD.">PhD.</label>
+                <input type = "radio" id = "PhD." name = "title" value = "PhD.">
+            </div>
+
+            <br>
+
+            <!-- to input a drop down box -->
+            <div>
+                <label for = "payment">Payment:</label>
+                <select id = "payment" name = "payment">
+                    <option value = "visa">Visa</option>
+                    <option value = "mastercard">Mastercard</option>
+                    <option value = "giftcard">Giftcard</option>
+                </select>
+            </div>
+
+            <br>
+
+             <!-- to input a birth date -->
+             <div>
+                <label for = "subscribe">Subscribe:</label>
+                <input type = "checkbox" id = "subscribe" name = "subscribe">
+            </div>
+            
+            <br>
+
+            <!-- to input a comment -->
+            <div>
+                <label for = "comment">Comment:</label>
+                <textarea id = "comment" rows = "3" cols = "25"></textarea>
+            </div>
+
+            <br>
+
+            <!-- for a file submission -->
+            <!-- accepts all files by default, use accept and put in parameter(s) -->
+             <label for = "comment">File:</label>
+             <input type = "file" id = "file" accept = "image/png, image/jpeg">
+
+        </form>
+
+    </body>
+
+</html>

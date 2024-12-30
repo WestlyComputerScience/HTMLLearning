@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title>Document</title>
+    </head>
+    <body>
+        <!--below is a button tag-->
+        <!--<a> tag makes it a hyperlink-->
+        <a href = "https://www.google.com">
+            <!-- disabled    for disabling button-->
+            <button disabled>
+                click me
+            </button>
+        </a>
+
+
+        <!--fancy things for button-->
+        <button onclick = "doSomething()" style = "background-color: darkgray; color: #00ff00; border-radius:25px">
+            click me
+        </button>
+
+        <!-- id sets what this paragraph is tested by -->
+        <p id = "test">Hello</p>
+
+        <!--simple javascript function-->
+        <!-- changes text from hello to goodbye-->
+        <script>
+            function doSomething()
+            {
+                document.getElementById("test").innerHTML = "GoodBye!"
+            }
+        </script>
+        
+    </body>
+</html>
